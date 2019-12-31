@@ -4,9 +4,9 @@ import entity.IEntity;
 import entity.Student;;
 
 public interface IDao {
-	void insert(IEntity entity) throws Exception;
-	void delete();
+	void insert(IEntity entity);
+	void delete(IEntity entity);
 	void update();
-	public HashMap<String, IEntity> getAllEntities(); 
 	public IEntity getEntity(String Id);
+
 }

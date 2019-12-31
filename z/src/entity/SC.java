@@ -3,7 +3,6 @@ package entity;
 public class SC implements IEntity {
 	private String studentNo;
 	private String courseNo;
-	private int grade;
 	public String getStudentNo() {
 		return studentNo;
 	}
@@ -15,11 +14,5 @@ public class SC implements IEntity {
 	}
 	public void setCourseNo(String courseNo) {
 		this.courseNo = courseNo;
-	}
-	public int getGrade() {
-		return grade;
-	}
-	public void setGrade(int grade) {
-		this.grade = grade;
 	}
 }

@@ -8,15 +8,16 @@ public class LoginUI {
 
 	public static void show() throws Exception {
 		Scanner scanner;
-		String studentName;
-		String studentPassword;
-		StudentBiz studentBiz;
+		String Name;
+		String Password;
+		StudentBiz studentBiz = new StudentBiz();
 		System.out.println("«Î ‰»Î—ß∫≈£∫");
 		scanner = new Scanner(System.in);
-		studentName = scanner.nextLine();
+		Name = scanner.nextLine();
 		System.out.println("«Î ‰»Î√‹¬Î£∫");
-		studentPassword = scanner.nextLine();
-		studentBiz = new StudentBiz();
-		studentBiz.login(studentName, studentPassword);
+		Password = scanner.nextLine();
+		scanner.close();
+		
+		studentBiz.login(Name, Password);
 	}
 }

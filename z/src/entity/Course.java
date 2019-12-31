@@ -3,7 +3,10 @@ package entity;
 public class Course implements IEntity {
 	private String courseNo;
 	private String courseName;
-	private int courseGrade;
+	private double courseCredit;
+	private String courseTeacher;
+	private int courseNumber;
+	
 	public String getCourseNo() {
 		return courseNo;
 	}
@@ -16,10 +19,26 @@ public class Course implements IEntity {
 	public void setCourseName(String courseName) {
 		this.courseName = courseName;
 	}
-	public int getCourseGrade() {
-		return courseGrade;
+	public double getCourseCredit() {
+		return courseCredit;
 	}
-	public void setCourseGrade(int courseGrade) {
-		this.courseGrade = courseGrade;
+	public void setCourseCredit(double courseCredit) {
+		this.courseCredit = courseCredit;
 	}
+	public String getCourseTeacher() {
+		return courseTeacher;
+	}
+	public void setCourseTeacher(String courseTeacher) {
+		this.courseTeacher = courseTeacher;
+	}
+	public int getCourseNumber() {
+		return courseNumber;
+	}
+	public void setCourseNumber(int courseNumber) {
+		this.courseNumber = courseNumber;
+	}
+	public void select() {
+		this.courseNumber--;
+	}
+	
 }

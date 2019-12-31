@@ -5,6 +5,7 @@ import java.util.Scanner;
 import biz.StudentBiz;
 
 public class RegisterUI {
+	static StudentBiz studentBiz = new StudentBiz();
 	public static void show() throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("请输入学号：");
@@ -22,8 +23,9 @@ public class RegisterUI {
 		System.out.println("请再次输入密码：");
 		String secondPassword = scanner.nextLine();
 		
-		StudentBiz sc = new StudentBiz();
-		sc.register(studentNo, 
+		scanner.close();
+		
+		studentBiz.register(studentNo, 
 				studentName, 
 				studentGender, 
 				studentAge, 
