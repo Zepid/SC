@@ -6,17 +6,16 @@ import biz.StudentBiz;
 
 public class LoginUI {	
 
-	public static void show() {
-		Scanner scanner;
-		String studentName;
-		String studentPassword;
-		StudentBiz studentBiz;
+	public static void show() throws Exception {
+		String Name;
+		String Password;
+		StudentBiz studentBiz = new StudentBiz();
 		System.out.println("«Î ‰»Î—ß∫≈£∫");
-		scanner = new Scanner(System.in);
-		studentName = scanner.nextLine();
+		Scanner scanner = new Scanner(System.in);
+		Name = scanner.nextLine();
 		System.out.println("«Î ‰»Î√‹¬Î£∫");
-		studentPassword = scanner.nextLine();
-		studentBiz = new StudentBiz();
-		studentBiz.login(studentName, studentPassword);
+		Password = scanner.nextLine();
+		
+		studentBiz.login(Name, Password);
 	}
 }

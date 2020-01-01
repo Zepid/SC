@@ -1,11 +1,12 @@
 package dao;
 import java.util.HashMap;
-import entity.IEntity;;
+import entity.IEntity;
+import entity.Student;;
 
 public interface IDao {
 	void insert(IEntity entity);
-	void delete();
+	void delete(IEntity entity);
 	void update();
-	public HashMap<String, IEntity> getAllEntities(); 
 	public IEntity getEntity(String Id);
+
 }

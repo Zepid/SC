@@ -3,10 +3,10 @@ package view;
 import java.util.Scanner;
 
 import biz.StudentBiz;
-import dao.StudentDao;
 
 public class RegisterUI {
-	public static void show() {
+	static StudentBiz studentBiz = new StudentBiz();
+	public static void show() throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("请输入学号：");
 		String studentNo = scanner.nextLine();
@@ -22,8 +22,9 @@ public class RegisterUI {
 		String firstPassword = scanner.nextLine();
 		System.out.println("请再次输入密码：");
 		String secondPassword = scanner.nextLine();
-		StudentBiz sc = new StudentBiz();
-		sc.register(studentNo, 
+		
+		
+		studentBiz.register(studentNo, 
 				studentName, 
 				studentGender, 
 				studentAge, 
@@ -31,4 +32,5 @@ public class RegisterUI {
 				firstPassword, 
 				secondPassword);
 	}
+	
 }

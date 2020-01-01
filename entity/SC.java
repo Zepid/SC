@@ -1,25 +1,25 @@
 package entity;
 
 public class SC implements IEntity {
+	private String studentName;
 	private String studentNo;
-	private String courseNo;
-	private int grade;
+	private String courseName;
+	public String getStudentName() {
+		return studentName;
+	}
+	public void setStudentName(String studentName) {
+		this.studentName = studentName;
+	}
 	public String getStudentNo() {
 		return studentNo;
 	}
 	public void setStudentNo(String studentNo) {
 		this.studentNo = studentNo;
 	}
-	public String getCourseNo() {
-		return courseNo;
+	public String getCourseName() {
+		return courseName;
 	}
-	public void setCourseNo(String courseNo) {
-		this.courseNo = courseNo;
-	}
-	public int getGrade() {
-		return grade;
-	}
-	public void setGrade(int grade) {
-		this.grade = grade;
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
 	}
 }
